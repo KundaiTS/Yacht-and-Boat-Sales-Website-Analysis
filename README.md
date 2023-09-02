@@ -27,10 +27,9 @@ To understand the distribution of key variables and identify patterns, SQL was u
 
 ### Customer Behavior Insights
 1. Which boat types receive the most views? Are there certain boat types that attract more interest than others?
-   `` select * from  ``
-3. What is the average price range for boats on the website? Are there price trends based on boat type or material used?
-4. Which countries are the website's visitors primarily from? Are there geographic trends in boat interest?
-5. Is there a correlation between the number of views a boat listing receives and the country of the visitor viewing it?
+2. What is the average price range for boats on the website? Are there price trends based on boat type or material used?
+3. Which countries are the website's visitors primarily from? Are there geographic trends in boat interest?
+4. Is there a correlation between the number of views a boat listing receives and the country of the visitor viewing it?
 
 ### Market Trends and Preferences
 1. Which manufacturers' boats are most frequently viewed on the website? Are there specific manufacturers that are more popular among buyers?
