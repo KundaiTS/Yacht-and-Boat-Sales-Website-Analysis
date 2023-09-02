@@ -19,11 +19,29 @@ The client represents a yacht and boat sales website. They have tasked me with a
   The data used in this project was from the [Boat Sales dataset](https://www.kaggle.com/datasets/karthikbhandary2/boat-sales) (CC0: Public Domain, dataset made available through Kaggle). This Kaggle dataset contains 9888 rows and 10 columns of data. It has details of the boats regarding the year it was built the type of boat, the price, the number of views in the last 7 days, and much more. Upon completion of this project, it was noted that there are no citations mentioned and the dataset was last updated 2 years ago. 
 
 ## Phase 3: Data Cleaning and Manipulation
-Cleaning and preprocessing the data was done to handle missing values, outliers, and inconsistencies. The location column consisted of a string comprised of the country, city/town, area, and in some cases the area code. I split the contents of this column by country and town/city. 
-I proceeded to remove duplicates, and 34 duplicate rows were found. I trimmed white space from 34 cells in total. All blank cells were replaced with null values.
+### Identifying Data Issues
+The first step in the data cleaning process was to identify issues with the dataset. The following issues were identified:
+1. Missing Values
+2. Duplicate Records and Whitespace
+3. Incorrect Data Types
+4. Inconsistent formatting
+5. Deleting Irrelevant Data
+
+### Data Cleaning
+1. **Handling Missing Values**
+   Beacuse of the nature of the data, I chose to replace missing values with a default value (i.e, NULL for string/varchar datatypes, and 0 for integers).
+2. **Removing Duplicates and Trimming Whitespaces**
+   To effectively remove duplicates and trim whitespaces, I used Google Sheets` inbuilt data cleanup function. No duplicate entries were found and 52 whitespaces were trimmed from the data.
+3. **Correcting Data Types**
+   The price column was set to 'text' datatype and this was changed to currency.
+4. **Standardizing Data**
+   The location column consisted of a string comprised of the country, city/town, area, and in some cases the area code.To ensure consistent formatting, such as uppercase or lowercase, and variations, I split the contents of this column by country and town/city. I also standardized the different currencies to USD for consistency.
+5. **Deleting Irrelevant Data**
+   I proceeded to delete irrelevant data by deleting the location, city/town, and postcode/Area code columns created in the previous step.
+
 
 ## Phase 4: Exploratory Data Analysis
-To understand the distribution of key variables and identify patterns, SQL was used as the primary tool for analysis. This choice was based on the scalability, performance, and data manipulation functions that SQL has to offer. For the analysis, the following questions were asked:
+To understand the distribution of key variables and identify patterns, Google Sheets` pivot tables were used as the primary tool for analysis. This choice was based on the size of the dataset, and the ease of preparation and processing for analysis. Also, the visualization functions that Google sheets has to offer. For the analysis, the following questions were asked:
 
 ### Customer Behavior Insights
 1. Which boat types receive the most views? Are there certain boat types that attract more interest than others?
